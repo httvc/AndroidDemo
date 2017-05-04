@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AndroidDemo</string>
+
+    <string-array name="array">
+        <item>Retrofit2.0</item>
+        <item>Retrofit2.0+RxJava</item>
+        <item>Retrofit2.0+RxJava+MVP</item>
+        <item>Retrofit2.0+RxJava+MVP+dagger</item>
+        <item >MVVM</item>
+    </string-array>
 </resources>
