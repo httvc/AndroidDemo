@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
 
     private void initRecyclerView() {
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        //layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerview.setLayoutManager(layoutManager);
         MainAdapter adapter=new MainAdapter(this,getData());
         recyclerview.setAdapter(adapter);
