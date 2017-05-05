@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.httvc.androiddemo.R;
-import com.httvc.androiddemo.api.BaseViewHolder;
+import com.httvc.androiddemo.base.BaseViewHolder;
 
 /**
  * Created by Android Studio

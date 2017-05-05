@@ -1,4 +1,4 @@
-package com.httvc.androiddemo.api;
+package com.httvc.androiddemo.base;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
