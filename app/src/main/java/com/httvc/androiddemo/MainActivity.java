@@ -8,6 +8,9 @@ import android.view.View;
 
 import com.httvc.androiddemo.adapter.MainAdapter;
 import com.httvc.androiddemo.beanjson.MainJson;
+import com.httvc.androiddemo.ui.NotificationActivity;
+import com.httvc.androiddemo.ui.UpdateVersionActivity;
+import com.httvc.androiddemo.utils.UIHelper;
 
 import java.util.ArrayList;
 
@@ -48,6 +51,24 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
 
     @Override
     public void onItemClick(View view, int position) {
+        switch (position){
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                UIHelper.openActivity(this, NotificationActivity.class);
+                break;
+            case 6:
+                UIHelper.openActivity(this, UpdateVersionActivity.class);
+                break;
+        }
 
     }
 
@@ -55,4 +76,6 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
     public void onItemLongClick(View view, int position) {
 
     }
+
+
 }

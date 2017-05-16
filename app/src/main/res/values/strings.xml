@@ -6,6 +6,8 @@
         <item>Retrofit2.0+RxJava</item>
         <item>Retrofit2.0+RxJava+MVP</item>
         <item>Retrofit2.0+RxJava+MVP+dagger</item>
-        <item >MVVM</item>
+        <item>MVVM</item>
+        <item>Notification</item>
+        <item>UpdateVersion</item>
     </string-array>
 </resources>
