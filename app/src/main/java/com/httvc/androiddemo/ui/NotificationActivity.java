@@ -30,8 +30,7 @@ public class NotificationActivity extends AppCompatActivity {
         manger = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     }
 
-    @OnClick({R.id.btn1,R.id.btn2,R.id.btn3,
-            R.id.btn4,R.id.btn5,R.id.btn6,R.id.btn7,R.id.btn8})
+    @OnClick({R.id.btn1})
     void setOnClick(View view){
         switch (view.getId()){
             case R.id.btn1:

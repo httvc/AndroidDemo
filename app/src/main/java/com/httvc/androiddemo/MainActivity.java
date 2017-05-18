@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.httvc.androiddemo.adapter.MainAdapter;
 import com.httvc.androiddemo.beanjson.MainJson;
+import com.httvc.androiddemo.ui.ListActivity;
 import com.httvc.androiddemo.ui.NotificationActivity;
 import com.httvc.androiddemo.ui.UpdateVersionActivity;
 import com.httvc.androiddemo.utils.UIHelper;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
                 break;
             case 6:
                 UIHelper.openActivity(this, UpdateVersionActivity.class);
+                break;
+            case 7:
+                UIHelper.openActivity(this, ListActivity.class);
                 break;
         }
 
