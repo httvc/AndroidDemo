@@ -21,16 +21,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.NotificationActivity" />
-
         <activity android:name=".ui.UpdateVersionActivity" />
 
-        <receiver
-            android:name=".receiver.DownLoadCompleteReceiver">
+        <receiver android:name=".receiver.DownLoadCompleteReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
-                <action android:name="android.intent.action.NOTIFICATION_CLICKED"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.NOTIFICATION_CLICKED" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".ui.ListActivity"></activity>
     </application>
 
 </manifest>

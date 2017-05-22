@@ -9,5 +9,6 @@
         <item>MVVM</item>
         <item>Notification</item>
         <item>UpdateVersion</item>
+        <item>listview</item>
     </string-array>
 </resources>
