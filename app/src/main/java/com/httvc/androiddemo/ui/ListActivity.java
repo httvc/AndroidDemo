@@ -1,13 +1,13 @@
 package com.httvc.androiddemo.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.httvc.androiddemo.R;
 import com.httvc.androiddemo.adapter.CommonAdapter;
 import com.httvc.androiddemo.adapter.ViewHolder;
-import com.httvc.androiddemo.wigdet.MyListView;
+import com.httvc.androiddemo.wigdet.ListViewUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,8 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        MyListView listview = (MyListView) findViewById(R.id.listView);
+        //MyListView listview = (MyListView) findViewById(R.id.listView);
+        ListView listview= (ListView) findViewById(R.id.listView);
         listview.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         List<String> list = new ArrayList<>();
         for (int i = 1; i < 5; i++) {
@@ -35,6 +36,6 @@ public class ListActivity extends AppCompatActivity {
         };
 
         listview.setAdapter(adapter);
-
+        ListViewUtils.setListViewHeightBasedOnChildren(listview);
     }
 }
