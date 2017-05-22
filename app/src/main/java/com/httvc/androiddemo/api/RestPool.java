@@ -20,7 +20,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RestPool {
-    private RestPool() {
+    private RestPool() {}
+
+    private static class SingletonHolder {
+        //单例对象实例
+        private static final RestPool INSTANCE = new RestPool();
+    }
+
+    public static final RestPool getInstance() {
+        return SingletonHolder.INSTANCE;
+    }
+
+    public static ApiService getService(){
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         // log拦截器  打印所有的log
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -41,14 +52,6 @@ public class RestPool {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         ApiService service = retrofit.create(ApiService.class);
-    }
-
-    private static class SingletonHolder {
-        //单例对象实例
-        private static final RestPool INSTANCE = new RestPool();
-    }
-
-    public static RestPool getInstance() {
-        return SingletonHolder.INSTANCE;
+        return service;
     }
 }
