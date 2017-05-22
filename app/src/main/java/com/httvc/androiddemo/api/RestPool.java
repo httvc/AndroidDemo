@@ -31,7 +31,7 @@ public class RestPool {
         return SingletonHolder.INSTANCE;
     }
 
-    public static ApiService getService(){
+    public  ApiService getService(){
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         // log拦截器  打印所有的log
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);

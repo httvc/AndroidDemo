@@ -30,7 +30,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".ui.ListActivity"></activity>
+        <activity android:name=".ui.ListActivity" />
+        <activity android:name=".ui.retrofit.RetrofitDemoActivity"></activity>
     </application>
 
 </manifest>
