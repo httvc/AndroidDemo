@@ -11,6 +11,16 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            keyAlias 'httvc'
+            keyPassword 'android'
+            storeFile file('../key/keystore.jks')
+            storePassword 'android'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -20,9 +30,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
-
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.android.support:recyclerview-v7:25.3.0'
     compile 'com.jakewharton:butterknife:8.5.1'
@@ -34,6 +42,5 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'io.reactivex:rxjava:1.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }

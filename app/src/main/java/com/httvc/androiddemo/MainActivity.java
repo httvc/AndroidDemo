@@ -11,6 +11,7 @@ import com.httvc.androiddemo.beanjson.MainJson;
 import com.httvc.androiddemo.ui.ListActivity;
 import com.httvc.androiddemo.ui.NotificationActivity;
 import com.httvc.androiddemo.ui.UpdateVersionActivity;
+import com.httvc.androiddemo.ui.retrofit.RetrofitDemoActivity;
 import com.httvc.androiddemo.utils.UIHelper;
 
 import java.util.ArrayList;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
     public void onItemClick(View view, int position) {
         switch (position){
             case 0:
+                UIHelper.openActivity(this, RetrofitDemoActivity.class);
                 break;
             case 1:
                 break;
