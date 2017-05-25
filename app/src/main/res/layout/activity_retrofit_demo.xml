@@ -1,22 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/scene_preview"
-    tools:context="com.httvc.androiddemo.ui.retrofit.RetrofitDemoActivity">
-    <TextView
-        android:id="@+id/tv_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="sssssss"/>
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_week"
-        android:layout_below="@id/tv_address"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="15px"
+        android:layout_marginTop="4dp"
+        android:background="@mipmap/item_top" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="@mipmap/item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">"
+
+        <TextView
+            android:id="@+id/date_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--android:text="2011年11月30日（星期三）"-->
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+        <!--android:text="更新时间：2017-05-25 13:19:45"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="zhousi"/>
-</RelativeLayout>
+        android:background="@mipmap/item_bg"
+        android:orientation="vertical">"
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/top_bar"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/cityField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+            <!--android:text="北京"-->
+
+            <TextView
+                android:id="@+id/currentTemp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/gold"
+                android:textColorHighlight="@color/lightgoldenrodyellow"
+                android:textColorHint="@color/darkgoldenrod"
+                android:textSize="24dp" />
+            <!-- android:text="13℃~10℃"-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/weather_icon01"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+            <!--android:src="@mipmap/w1"-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">"
+
+                <TextView
+                    android:id="@+id/currentWeather"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+                <!--android:text="晴"-->
+
+                <TextView
+                    android:id="@+id/currentWind"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+                <!--android:text="北风小于3级"-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/index_d"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="5dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+        <!--android:text="建议着薄型套装或牛仔衫裤等春秋过渡装。年老体弱者宜着套装、夹克衫等。"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65px"
+        android:layout_weight="0.03"
+        android:background="@mipmap/item_mid"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="明天"
+            android:textColor="@color/snow"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="后天"
+            android:textColor="@color/snow"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@mipmap/item_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/weather_icon02"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+                <!-- android:src="@mipmap/w1"-->
+
+                <TextView
+                    android:id="@+id/weather02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/snow"
+                    android:textSize="14dp" />
+                <!-- android:text="多云"-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/temp02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/snow"
+                android:textSize="14dp" />
+            <!--android:text="14℃~6℃"-->
+            <TextView
+                android:id="@+id/wind02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/snow"
+                android:textSize="14dp" />
+            <!--android:text="北风小于3级"-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/weather_icon03"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+                <!--android:src="@mipmap/w0"-->
+
+                <TextView
+                    android:id="@+id/weather03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/snow"
+                    android:textSize="14dp" />
+                <!-- android:text="多云"-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/temp03"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+            <!--android:text="13℃~5℃"-->
+
+            <TextView
+                android:id="@+id/wind03"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/snow"
+                android:textSize="14dp" />
+            <!--android:text="北风小于3级"-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20px"
+        android:background="@mipmap/item_foot" />
+</LinearLayout>

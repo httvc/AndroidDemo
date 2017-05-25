@@ -50,7 +50,7 @@
         </receiver>
 
         <activity android:name=".ui.ListActivity" />
-        <activity android:name=".ui.retrofit.RetrofitDemoActivity"/>
+        <activity android:name=".ui.retrofit.WeatherActivity"/>
 
 
         <service android:name="com.baidu.location.f"

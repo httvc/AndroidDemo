@@ -11,7 +11,7 @@ package com.httvc.androiddemo.api;
 public class HttpResult<T> {
     private String status; //错误码
     private String msg;    //提示
-    private T data;        //数据
+    private T result;        //数据
 
     public String getStatus() {
         return status;
@@ -29,12 +29,12 @@ public class HttpResult<T> {
         this.msg = msg;
     }
 
-    public T getData() {
-        return data;
+    public T getResult() {
+        return result;
     }
 
-    public void setData(T data) {
-        this.data = data;
+    public void setResult(T result) {
+        this.result = result;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class HttpResult<T> {
         return "HttpResult{" +
                 "status='" + status + '\'' +
                 ", msg='" + msg + '\'' +
-                ", data=" + data +
+                ", result=" + result +
                 '}';
     }
 }

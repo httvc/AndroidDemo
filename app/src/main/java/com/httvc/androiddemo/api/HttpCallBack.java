@@ -77,7 +77,7 @@ public abstract class HttpCallBack<T> implements Callback<HttpResult<T>> {
             String responseCode = response.body().getStatus();
             int code = Integer.parseInt(responseCode);
             if ("0".equals(responseCode)) {
-                onSuccess(response.body().getData());
+                onSuccess(response.body().getResult());
             } else if ("101".equals(responseCode)) {
                 errorMessage = "APPKEY为空或不存在";
                 onFailure(code, errorMessage);

@@ -9,6 +9,5 @@ package com.httvc.androiddemo.config;
  */
 
 public class Constant {
-   // public static final String URL= "http://api.jisuapi.com/";
-    public static final String URL="http://www.httvc.cn/";
+    public static final String URL= "http://api.jisuapi.com/";
 }
