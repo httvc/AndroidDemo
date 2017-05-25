@@ -80,22 +80,32 @@ public abstract class HttpCallBack<T> implements Callback<HttpResult<T>> {
                 onSuccess(response.body().getData());
             } else if ("101".equals(responseCode)) {
                 errorMessage = "APPKEY为空或不存在";
+                onFailure(code, errorMessage);
             } else if ("102".equals(responseCode)) {
                 errorMessage = "APPKEY已过期";
+                onFailure(code, errorMessage);
             } else if ("103".equals(responseCode)) {
                 errorMessage = "APPKEY无请求此数据权限";
+                onFailure(code, errorMessage);
             } else if ("104".equals(responseCode)) {
                 errorMessage = "请求超过次数限制";
+                onFailure(code, errorMessage);
             } else if ("105".equals(responseCode)) {
                 errorMessage = "IP被禁止";
+                onFailure(code, errorMessage);
             } else if ("106".equals(responseCode)) {
                 errorMessage = "IP请求超过限制";
+                onFailure(code, errorMessage);
             } else if ("107".equals(responseCode)) {
                 errorMessage = "接口维护中";
+                onFailure(code, errorMessage);
             } else if ("108".equals(responseCode)) {
                 errorMessage = "接口已停用";
+                onFailure(code, errorMessage);
+            }else {
+                onFailure(code, errorMessage);
             }
-            onFailure(code, errorMessage);
+
         } else {
             //================ 1.handle http default error 4xx,5xx=================
             int code = response.raw().code();

@@ -15,6 +15,7 @@ import com.httvc.androiddemo.utils.ToastUtil;
 
 import java.math.BigDecimal;
 
+
 public class RetrofitDemoActivity extends AppCompatActivity {
 
     public LocationClient mLocationClient = null;
@@ -116,7 +117,6 @@ public class RetrofitDemoActivity extends AppCompatActivity {
                 // sb.append("离线定位成功，离线定位结果也是有效的");
 
             } else if (location.getLocType() == BDLocation.TypeServerError) {
-
                 sb.append("\ndescribe : ");
 
             } else if (location.getLocType() == BDLocation.TypeNetWorkException) {
@@ -140,7 +140,7 @@ public class RetrofitDemoActivity extends AppCompatActivity {
     }
 
     private void initData(String location){
-        RestPool.getInstance().getService().weather("756571ec84bad655",location).enqueue(new HttpCallBack<Weather>(this,true,"加载中...") {
+        RestPool.getInstance().getService().weather("756571ec84bad654",location).enqueue(new HttpCallBack<Weather>(this,true,"加载中...") {
 
             @Override
             public void onSuccess(Weather weather) {
