@@ -1,13 +1,13 @@
 package com.httvc.androiddemo;
 
-import android.util.Log;
-
 import org.junit.Test;
 
 import rx.Observable;
+import rx.Subscriber;
 import rx.functions.Action1;
+import rx.schedulers.Schedulers;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -30,6 +30,48 @@ public class ExampleUnitTest {
             @Override
             public void call(String s) {
                 System.out.println(s);
+            }
+        });
+
+        Observable.just(1,2,3,4)
+                .subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.immediate())
+                .subscribe(new Subscriber<Integer>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(Integer integer) {
+                System.out.println(integer);
+            }
+        });
+
+        Observable.just(1,2,3,4,5).lift(new Observable.Operator<String, Integer>() {
+            @Override
+            public Subscriber<? super Integer> call(final Subscriber<? super String> subscriber) {
+                return new Subscriber<Integer>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(Integer integer) {
+                       subscriber.onNext(integer+"");
+                    }
+                };
             }
         });
     }

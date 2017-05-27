@@ -16,6 +16,7 @@ import com.httvc.androiddemo.ui.ListActivity;
 import com.httvc.androiddemo.ui.NotificationActivity;
 import com.httvc.androiddemo.ui.UpdateVersionActivity;
 import com.httvc.androiddemo.ui.retrofit.WeatherActivity;
+import com.httvc.androiddemo.ui.rxjava.StarcastActivity;
 import com.httvc.androiddemo.utils.UIHelper;
 
 import java.math.BigDecimal;
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
                 UIHelper.openActivityWithBundle(this, WeatherActivity.class,bundle);
                 break;
             case 1:
+                UIHelper.openActivity(this, StarcastActivity.class);
                 break;
             case 2:
                 break;

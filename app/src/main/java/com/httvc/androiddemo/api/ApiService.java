@@ -3,6 +3,8 @@ package com.httvc.androiddemo.api;
 import com.httvc.androiddemo.pojo.Starcast;
 import com.httvc.androiddemo.pojo.Weather;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -31,7 +33,7 @@ public interface ApiService {
 
     //Retrofit2.0+RxJava+RxAndroid
     @GET("astro/all")
-    Observable<Starcast> starcast(@Query("appkey") String appKey);
+    Observable<HttpResult<List<Starcast>>> starcast(@Query("appkey") String appKey);
 
 
 
