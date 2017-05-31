@@ -1,5 +1,6 @@
 package com.httvc.androiddemo.api;
 
+import com.httvc.androiddemo.pojo.Channel;
 import com.httvc.androiddemo.pojo.Starcast;
 import com.httvc.androiddemo.pojo.Weather;
 
@@ -34,6 +35,10 @@ public interface ApiService {
     //Retrofit2.0+RxJava+RxAndroid
     @GET("astro/all")
     Observable<HttpResult<List<Starcast>>> starcast(@Query("appkey") String appKey);
+
+
+    @GET("/tv/channel")
+    Observable<HttpResult<List<Channel>>> chennel(@Query("appkey") String appKey);
 
 
 
