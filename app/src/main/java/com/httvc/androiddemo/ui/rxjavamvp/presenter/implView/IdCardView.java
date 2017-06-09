@@ -1,4 +1,4 @@
-package com.httvc.androiddemo.presenter.implView;
+package com.httvc.androiddemo.ui.rxjavamvp.presenter.implView;
 
 import com.httvc.androiddemo.api.HttpResult;
 import com.httvc.androiddemo.pojo.IdCard;

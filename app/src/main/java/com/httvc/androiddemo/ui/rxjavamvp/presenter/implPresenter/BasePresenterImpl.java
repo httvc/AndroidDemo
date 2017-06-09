@@ -1,6 +1,6 @@
-package com.httvc.androiddemo.presenter.implPresenter;
+package com.httvc.androiddemo.ui.rxjavamvp.presenter.implPresenter;
 
-import com.httvc.androiddemo.presenter.BasePresenter;
+import com.httvc.androiddemo.ui.rxjavamvp.presenter.BasePresenter;
 
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;

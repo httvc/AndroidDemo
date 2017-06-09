@@ -1,4 +1,4 @@
-package com.httvc.androiddemo.presenter;
+package com.httvc.androiddemo.ui.rxjavamvp.presenter;
 
 /**
  * Created by Android Studio

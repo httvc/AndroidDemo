@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import com.httvc.androiddemo.R;
 import com.httvc.androiddemo.api.HttpResult;
 import com.httvc.androiddemo.pojo.IdCard;
-import com.httvc.androiddemo.presenter.implPresenter.IdCardPresenterImpl;
-import com.httvc.androiddemo.presenter.implView.IdCardView;
+import com.httvc.androiddemo.ui.rxjavamvp.presenter.implPresenter.IdCardPresenterImpl;
+import com.httvc.androiddemo.ui.rxjavamvp.presenter.implView.IdCardView;
 import com.httvc.androiddemo.utils.CommonUtils;
 import com.httvc.androiddemo.utils.ToastUtil;
 

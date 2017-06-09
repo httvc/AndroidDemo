@@ -1,10 +1,10 @@
-package com.httvc.androiddemo.presenter.implPresenter;
+package com.httvc.androiddemo.ui.rxjavamvp.presenter.implPresenter;
 
 import com.httvc.androiddemo.api.HttpResult;
 import com.httvc.androiddemo.api.RestPool;
 import com.httvc.androiddemo.pojo.IdCard;
-import com.httvc.androiddemo.presenter.IdCardPresenter;
-import com.httvc.androiddemo.presenter.implView.IdCardView;
+import com.httvc.androiddemo.ui.rxjavamvp.presenter.IdCardPresenter;
+import com.httvc.androiddemo.ui.rxjavamvp.presenter.implView.IdCardView;
 
 import rx.Observer;
 import rx.Subscription;
