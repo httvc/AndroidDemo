@@ -1,7 +1,7 @@
 package com.httvc.androiddemo.ui.rxjava;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.SupportActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -21,7 +21,8 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class StarcastActivity extends AppCompatActivity {
+
+public class StarcastActivity extends SupportActivity {
     @BindView(R.id.recyclerview)
     RecyclerView recyclerview;
     private ArrayList<Starcast> list = new ArrayList<>();

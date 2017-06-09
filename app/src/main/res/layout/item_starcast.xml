@@ -37,7 +37,7 @@
                 android:layout_toRightOf="@+id/item_startcast_iv"
                 android:text="测试"
                 android:textColor="@color/white"
-                android:textSize="40px" />
+                android:textSize="20px" />
 
             <TextView
                 android:id="@+id/item_startcast_data"
@@ -48,7 +48,7 @@
                 android:layout_marginRight="20dp"
                 android:text="测试"
                 android:textColor="@color/white"
-                android:textSize="40px" />
+                android:textSize="20px" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.httvc.androiddemo.ui.rxjavamvp.IdCardActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+        <EditText
+            android:id="@+id/edit_idcard"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:hint="身份证号"
+            android:background="#FFFFFF"/>
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="查询"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" >
+
+        <ImageView
+            android:id="@+id/im_header"
+            android:layout_width="90dp"
+            android:layout_height="110dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/sfz_photo" />
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/im_header"
+            android:minHeight="45dp" >
+
+            <TextView
+                android:id="@+id/sc_name1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="top"
+                android:paddingTop="15dp"
+                android:text="省 份"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/sc_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:gravity="bottom"
+                android:minHeight="43dp"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_name"
+            android:layout_toLeftOf="@id/im_header"
+            android:minHeight="45dp" >
+
+            <TextView
+                android:id="@+id/sc_gender1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="top"
+                android:paddingTop="15dp"
+                android:text="@string/sfz_gender"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/sc_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:gravity="bottom"
+                android:minHeight="43dp"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_nation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_gender"
+            android:layout_toLeftOf="@id/im_header"
+            android:minHeight="45dp" >
+
+            <TextView
+                android:id="@+id/sc_nation1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="top"
+                android:paddingTop="15dp"
+                android:text="@string/sfz_nation"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/sc_nation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:gravity="bottom"
+                android:minHeight="43dp"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_nation"
+            android:minHeight="45dp" >
+
+            <TextView
+                android:id="@+id/sc_date1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="top"
+                android:paddingTop="15dp"
+                android:text="@string/sfz_date"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/sc_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:gravity="bottom"
+                android:minHeight="43dp"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_date"
+            android:minHeight="45dp" >
+
+            <TextView
+                android:id="@+id/sc_address1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="top"
+                android:paddingTop="15dp"
+                android:text="@string/sfz_address"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/sc_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:gravity="bottom"
+                android:minHeight="43dp"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_identification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_address"
+            android:minHeight="45dp" >
+
+            <TextView
+                android:id="@+id/sc_identification1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="top"
+                android:paddingTop="15dp"
+                android:text="@string/sfz_identification"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/sc_identification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:gravity="bottom"
+                android:minHeight="43dp"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

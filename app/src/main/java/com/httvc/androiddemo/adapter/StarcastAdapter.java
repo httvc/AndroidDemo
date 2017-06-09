@@ -5,10 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.httvc.androiddemo.R;
 import com.httvc.androiddemo.pojo.Starcast;
 import com.httvc.androiddemo.viewholder.StarcastViewHolder;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -38,7 +39,8 @@ public class StarcastAdapter extends RecyclerView.Adapter<StarcastViewHolder> {
         if (list!=null&&list.size()!=0){
             holder.name.setText(list.get(position).getAstroname());
             holder.data.setText(list.get(position).getDate());
-            Picasso.with(mContext).load(list.get(position).getPic()).into(holder.iv);
+            Glide.with(mContext).load(list.get(position).getPic())
+                    .diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.iv);
         }
     }
 

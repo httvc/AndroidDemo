@@ -17,6 +17,7 @@ import com.httvc.androiddemo.ui.NotificationActivity;
 import com.httvc.androiddemo.ui.UpdateVersionActivity;
 import com.httvc.androiddemo.ui.retrofit.WeatherActivity;
 import com.httvc.androiddemo.ui.rxjava.StarcastActivity;
+import com.httvc.androiddemo.ui.rxjavamvp.IdCardActivity;
 import com.httvc.androiddemo.utils.UIHelper;
 
 import java.math.BigDecimal;
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
                 UIHelper.openActivity(this, StarcastActivity.class);
                 break;
             case 2:
+                UIHelper.openActivity(this, IdCardActivity.class);
                 break;
             case 3:
                 break;

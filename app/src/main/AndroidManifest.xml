@@ -55,13 +55,14 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"></service>
+            android:process=":remote" />
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="6Dplpx0WUxuqNjofnYmseVmABcxZDBUe" />
 
-        <activity android:name=".ui.rxjava.StarcastActivity"></activity>
+        <activity android:name=".ui.rxjava.StarcastActivity" />
+        <activity android:name=".ui.rxjavamvp.IdCardActivity"></activity>
     </application>
 
 </manifest>

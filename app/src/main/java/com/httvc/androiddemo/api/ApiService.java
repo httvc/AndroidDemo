@@ -1,6 +1,7 @@
 package com.httvc.androiddemo.api;
 
 import com.httvc.androiddemo.pojo.Channel;
+import com.httvc.androiddemo.pojo.IdCard;
 import com.httvc.androiddemo.pojo.Starcast;
 import com.httvc.androiddemo.pojo.Weather;
 
@@ -40,6 +41,8 @@ public interface ApiService {
     @GET("/tv/channel")
     Observable<HttpResult<List<Channel>>> chennel(@Query("appkey") String appKey);
 
+    @GET("idcard/query")
+    Observable<HttpResult<IdCard>> idCard(@Query("appkey") String appKey,@Query("idcard") String idcard);
 
 
 }

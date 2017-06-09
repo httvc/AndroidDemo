@@ -11,4 +11,25 @@
         <item>UpdateVersion</item>
         <item>listview</item>
     </string-array>
+
+    <string name="sfz_yz">身份证验证</string>
+    <string name="sfz_qfsfz">请放身份证…</string>
+    <string name="sfz_sfhy">快递实名制>>身份核验</string>
+    <string name="sfz_kxys">快递实名制>>开箱验视</string>
+    <string name="sfz_hytg">上传</string>
+    <string name="sfz_hysb">核验失败</string>
+    <string name="sfz_ystg">验视通过</string>
+    <string name="sfz_smzrz">实名制认证</string>
+    <string name="sfz_name">姓&#160;&#160;&#160;&#160;名</string>
+    <string name="sfz_gender">性&#160;&#160;&#160;&#160;别</string>
+    <string name="sfz_nation">民&#160;&#160;&#160;&#160;族</string>
+    <string name="sfz_date">出生日期</string>
+    <string name="sfz_address">出生地址</string>
+    <string name="sfz_identification">身份证号</string>
+    <string name="sfz_dkz">读取身份信息，请稍候…</string>
+    <string name="sfz_dqcg">读取成功</string>
+    <string name="sfz_dqsc">读取失败，请重新放置身份证</string>
+    <string name="sfz_wjcdsfz">未检测到身份证</string>
+    <string name="_sfzyanzheng">验证身份</string>
+    <string name="_starting_smzyanzhen">请进行实名制验证...</string>
 </resources>
