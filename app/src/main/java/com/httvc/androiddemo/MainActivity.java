@@ -15,6 +15,7 @@ import com.httvc.androiddemo.beanjson.MainJson;
 import com.httvc.androiddemo.ui.ListActivity;
 import com.httvc.androiddemo.ui.NotificationActivity;
 import com.httvc.androiddemo.ui.UpdateVersionActivity;
+import com.httvc.androiddemo.ui.mvvm.AirQualityActivity;
 import com.httvc.androiddemo.ui.retrofit.WeatherActivity;
 import com.httvc.androiddemo.ui.rxjava.StarcastActivity;
 import com.httvc.androiddemo.ui.rxjavamvp.IdCardActivity;
@@ -84,8 +85,10 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
                 UIHelper.openActivity(this, IdCardActivity.class);
                 break;
             case 3:
+
                 break;
             case 4:
+                UIHelper.openActivity(this, AirQualityActivity.class);
                 break;
             case 5:
                 UIHelper.openActivity(this, NotificationActivity.class);
@@ -147,6 +150,8 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
 
     public class MyLocationListener implements BDLocationListener {
 
+        private String city;
+
         @Override
         public void onReceiveLocation(BDLocation location) {
 
@@ -155,6 +160,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
             //   sb.append(location.getLatitude());    //获取纬度信息
             latitude = new BigDecimal(location.getLatitude()).setScale(6, BigDecimal.ROUND_HALF_EVEN).doubleValue();
             longitude = new BigDecimal(location.getLongitude()).setScale(6, BigDecimal.ROUND_HALF_UP).doubleValue();
+            city = location.getCity();
             // sb.append("\nlontitude : ");
             //  sb.append(location.getLongitude());    //获取经度信息
 
@@ -167,12 +173,14 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
 
                 latitude = new BigDecimal(location.getLatitude()).setScale(6, BigDecimal.ROUND_HALF_UP).doubleValue();
                 longitude = new BigDecimal(location.getLongitude()).setScale(6, BigDecimal.ROUND_HALF_UP).doubleValue();
+                city = location.getCity();
 
             } else if (location.getLocType() == BDLocation.TypeNetWorkLocation) {
 
                 // 网络定位结果
                 latitude = new BigDecimal(location.getLatitude()).setScale(6, BigDecimal.ROUND_HALF_UP).doubleValue();
                 longitude = new BigDecimal(location.getLongitude()).setScale(6, BigDecimal.ROUND_HALF_UP).doubleValue();
+                city = location.getCity();
                 //  sb.append("网络定位成功");
 
             } else if (location.getLocType() == BDLocation.TypeOffLineLocation) {
@@ -181,6 +189,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
 
                 latitude = new BigDecimal(location.getLatitude()).setScale(6, BigDecimal.ROUND_HALF_UP).doubleValue();
                 longitude = new BigDecimal(location.getLongitude()).setScale(6, BigDecimal.ROUND_HALF_UP).doubleValue();
+                city = location.getCity();
                 //  sb.append("\ndescribe : ");
                 // sb.append("离线定位成功，离线定位结果也是有效的");
 

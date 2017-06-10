@@ -62,7 +62,8 @@
             android:value="6Dplpx0WUxuqNjofnYmseVmABcxZDBUe" />
 
         <activity android:name=".ui.rxjava.StarcastActivity" />
-        <activity android:name=".ui.rxjavamvp.IdCardActivity"></activity>
+        <activity android:name=".ui.rxjavamvp.IdCardActivity" />
+        <activity android:name=".ui.mvvm.AirQualityActivity"></activity>
     </application>
 
 </manifest>

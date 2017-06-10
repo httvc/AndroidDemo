@@ -1,5 +1,6 @@
 package com.httvc.androiddemo.api;
 
+import com.httvc.androiddemo.pojo.AirQuality;
 import com.httvc.androiddemo.pojo.Channel;
 import com.httvc.androiddemo.pojo.IdCard;
 import com.httvc.androiddemo.pojo.Starcast;
@@ -44,5 +45,6 @@ public interface ApiService {
     @GET("idcard/query")
     Observable<HttpResult<IdCard>> idCard(@Query("appkey") String appKey,@Query("idcard") String idcard);
 
-
+    @GET("/aqi/query")
+    Observable<HttpResult<AirQuality>> airQuality(@Query("appkey") String appKey,@Query("city") String city);
 }
