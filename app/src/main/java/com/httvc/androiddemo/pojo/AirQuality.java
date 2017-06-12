@@ -40,6 +40,15 @@ public class AirQuality {
     private String timepoint; //发布时间
     private AqiinfoEntity aqiinfo; //AQI指数信息
     private List<PositionEntity> position;//监测点
+    private boolean flag;//添加的标注
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
 
     public String getCityid() {
         return cityid;

@@ -13,7 +13,7 @@
     <dimen name="main_txt_city_value_margin_top">-8.0dip</dimen>
     <dimen name="main_txt_city_value_text_size">25.0sp</dimen>
     <dimen name="main_txt_value_text_size">50.0sp</dimen>
-    <dimen name="main_txt_value_margin_right">50.0dip</dimen>
+    <dimen name="main_txt_value_margin_right">60.0dip</dimen>
     <dimen name="main_txt_value_margin_top">10.0dip</dimen>
     <dimen name="main_line_margin_top">60.0dip</dimen>
     <dimen name="main_txt_next_margin_left">80.0dip</dimen>

@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
     public BDLocationListener myListener = new MyLocationListener();
     private double latitude;
     private double longitude;
+    private String city;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +89,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
 
                 break;
             case 4:
-                UIHelper.openActivity(this, AirQualityActivity.class);
+                Bundle bundle1=new Bundle();
+                bundle1.putString("CITY",city);
+                UIHelper.openActivityWithBundle(this, AirQualityActivity.class,bundle1);
                 break;
             case 5:
                 UIHelper.openActivity(this, NotificationActivity.class);
@@ -150,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
 
     public class MyLocationListener implements BDLocationListener {
 
-        private String city;
+
 
         @Override
         public void onReceiveLocation(BDLocation location) {
